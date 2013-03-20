@@ -1,0 +1,16 @@
+Enter The Grades
+<hr>
+<%= form_for @grade do |f| -%>
+Title: <%= f.text_field :title %><br />
+Description: <%= f.text_field :description %><br />
+<%= f.submit %>
+<% end -%>
+<hr>
+Display all grade <br />
+<% if !@grades.blank? %>
+<% for item in @grades %>
+<%= item.title %>  <br />
+<%= item.description %>  <br />
+<% end -%>
+<% else %>
+<% end -%>
