@@ -1,0 +1,29 @@
+Batches
+<hr>
+<%= form_for @batch do |f| -%>
+Title: <%= f.text_field :title %><br />
+Grade: <%= f.text_field :grade %><br />
+Start Date: <%= f.text_field :start_date %><br />
+End Date: <%= f.text_field :end_date %><br />
+Days Of Week: <%= f.text_field :days_of_week %><br />
+From time: <%= f.text_field :from_time %><br />
+To Time: <%= f.text_field :to_time %><br />
+
+<%= f.submit %>
+<% end -%>
+<hr>
+Display all batches <br />
+<% if !@batches.blank? %>
+<% for item in @batches %>
+<%= item.title %>  <br />
+<%= item.grade %>  <br />
+<%= item.start_date %>  <br />
+<%= item.end_date %>  <br />
+<%= item.days_of_week %>  <br />
+<%= item.from_time %>  <br />
+<%= item.to_time %>  <br />
+
+<% end -%>
+<% else %>
+<% end -%>
+
