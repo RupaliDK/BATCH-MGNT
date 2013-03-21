@@ -1,11 +1,9 @@
 RupsBatch::Application.routes.draw do
 resources :students
 resources :grades
-<<<<<<< HEAD
 resources :batches
-=======
 resources :smasters
->>>>>>> dd37d49c32b0940e191f48e45ebefbf6c60fa25c
+resources :mcities
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
