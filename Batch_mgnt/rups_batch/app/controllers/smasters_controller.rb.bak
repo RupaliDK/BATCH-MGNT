@@ -1,0 +1,4 @@
+class SmastersController < ApplicationController
+def new
+end
+end
