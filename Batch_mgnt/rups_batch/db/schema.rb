@@ -11,6 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130321073527) do
 
   create_table "batches", :force => true do |t|
@@ -24,12 +25,27 @@ ActiveRecord::Schema.define(:version => 20130321073527) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
+=======
+ActiveRecord::Schema.define(:version => 20130321083103) do
+>>>>>>> dd37d49c32b0940e191f48e45ebefbf6c60fa25c
 
   create_table "grades", :force => true do |t|
     t.text     "title"
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "smasters", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "state_masters", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "students", :force => true do |t|
