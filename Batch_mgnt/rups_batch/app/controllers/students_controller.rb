@@ -9,12 +9,22 @@ end#index
 def create
     @student = Student.new(params[:student])
     respond_to do |format|
-	if @student.save
-        format.html {redirect_to @student, notice: 'Student has been created successfully' }
-       end#if
+    if @student.save
+    format.html {redirect_to @student, notice: 'Student has been created successfully' }
+    end#if
        end#respond
 end#create
 def new
 	 @student = Student.new
 end#new
+
+def show
+	@student=Student.new
+       @student = Student.find(:all)
+       respond_to do |format|
+       format.html # show.html.erb
+       format.json { render json: @student }
+       end#do
+end#show
 end#class
+
