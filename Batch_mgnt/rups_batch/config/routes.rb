@@ -1,5 +1,5 @@
 RupsBatch::Application.routes.draw do
-resources :students
+resources :students 
 resources :grades
 resources :batches
 resources :smasters

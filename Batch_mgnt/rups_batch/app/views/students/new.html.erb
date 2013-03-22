@@ -1,6 +1,6 @@
 <h1>Register</h1>
 <div>
-<%= form_for @student do |f| %>
+<%= form_for @students do |f| %>
   <p>
     <%= f.label :first_name %>:
     <%= f.text_field :first_name %>
@@ -49,3 +49,4 @@
 <% end %>
 
 </div> 
+<%= link_to 'Back', students_path %>

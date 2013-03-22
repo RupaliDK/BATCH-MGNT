@@ -25,5 +25,7 @@ def show
        format.json { render json: @student }
        end#do
 end#show
-end#class
-
+def edit
+  @students = Student.find(params[:id])
+end
+end
