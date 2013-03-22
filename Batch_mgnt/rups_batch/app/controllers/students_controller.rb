@@ -19,7 +19,7 @@ def new
 end#new
 
 def show
-       @students = Student.find(:all)
+       @students = Student.find(params[:id])
        respond_to do |format|
        format.html # show.html.erb
        format.json { render json: @student }
