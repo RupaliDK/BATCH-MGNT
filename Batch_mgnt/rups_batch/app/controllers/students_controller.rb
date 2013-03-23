@@ -10,7 +10,7 @@ def create
     @students = Student.new(params[:student])
     respond_to do |format|
     if @students.save
-    format.html {redirect_to @student, notice: 'Student has been created successfully' }
+    format.html {redirect_to @students, notice: 'Student has been created successfully' }
     end#if
        end#respond
 end#create
@@ -22,7 +22,7 @@ def show
        @students = Student.find(params[:id])
        respond_to do |format|
        format.html # show.html.erb
-       format.json { render json: @student }
+       format.json { render json: @students }
        end#do
 end#show
 end#class
