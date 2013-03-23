@@ -1,14 +1,5 @@
-<%= form_for @mcitie do |f| -%>
+<%= form_for @mcities do |f| -%>
 Name: <%= f.text_field :name %><br />
 State: <%= f.text_field :state %><br />
 <%= f.submit %>
-<% end -%>
-<hr>
-Display all cities <br />
-<% if !@mcities.blank? %>
-<% for item in @mcities %>
-<%= item.name %>  <br />
-<%= item.state %>  <br />
-<% end -%>
-<% else %>
 <% end -%>

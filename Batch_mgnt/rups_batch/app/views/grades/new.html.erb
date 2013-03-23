@@ -1,9 +1,5 @@
-Enter The Grades
-<hr>
-<%= form_for @grades do |f| -%>
-Title: <%= f.text_field :title %><br />
-Description: <%= f.text_field :description %><br />
-<%= f.submit %>
-<% end -%>
-<hr>
+<h1>New grade</h1>
+ 
+<%= render 'form' %>
+ 
 <%= link_to 'Back', grades_path %>
