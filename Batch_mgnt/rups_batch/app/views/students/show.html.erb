@@ -1,1 +1,54 @@
-shkgg
+<p id="notice"><%= notice %></p>
+ 
+<p>
+  <b>firstName:</b>
+  <%= @students.first_name %>
+</p>
+ 
+<p>
+  <b>lastname:</b>
+  <%= @students.last_name %>
+</p>
+ 
+<p>
+  <b>middlename:</b>
+  <%= @students.middle_name %>
+</p>
+ 
+<p>
+  <b>Email:</b>
+  <%= @students.email %>
+</p>
+
+<p>
+  <b>mobile:</b>
+  <%= @students.mobile %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @students.state %>
+</p>
+
+<p>
+  <b>city:</b>
+  <%= @students.city %>
+</p>
+
+<p>
+  <b>Zip_code:</b>
+  <%= @students.zip_code %>
+</p>
+
+<p>
+  <b>Grade:</b>
+  <%= @students.grade %>
+</p>
+<p>
+  <b>Enrollment_Date:</b>
+  <%= @students.enrollment_date %>
+</p>
+<%= link_to 'Edit', edit_student_path(@students) %> |
+<%= link_to 'Back', students_path %>
+<%= link_to 'Save', new_grade_path %>
+
