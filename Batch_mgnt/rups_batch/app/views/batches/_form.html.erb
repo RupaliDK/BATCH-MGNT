@@ -1,46 +1,46 @@
-<%= form_for(@batch) do |f| %>
-<% if @batch.errors.any? %>
-<div id="errorExplanation">
-<h2><%= pluralize(@batch.errors.count, "error") %> prohibited
-this batch from being saved:</h2>
-<ul>
-<% @batch.errors.full_messages.each do |msg| %>
-<li><%= msg %></li>
-<% end %>
-</ul>
-</div>
-<% end %>
+<%= form_for(@batches) do |f| %>
+  <% if @batches.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@batches.errors.count, "error") %> prohibited
+        this batch from being saved:</h2>
+    <ul>
+    <% @batches.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+ 
+   <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :grade %><br />
+    	<%= collection_select :batch, :grade_id, Grade.all, :id, :title, { :prompt => true} %>
+  </div>
 <div class="field">
-<%= f.label :title %><br />
-<%= f.text_field :title %>
-</div>
-<div class="field">
-<%= f.label :grade %><br />
- <%= collection_select :batch, :grade_id, Grade.all, :id, :title { :prompt => 'select grade'} %>
-</div>
-<div class="field">
-<%= f.label :start_date %><br />
-<%= f.text_field :start_date %>
-</div>
-<div class="field">
-<%= f.label :end_date %><br />
-<%= f.text_field :end_date %>
-</div>
-<div class="field">
-<%= f.label :days_of_week %><br />
-<%= f.text_field :days_of_week %>
-  <%= radio_button_tag(name, value, checked = true, options = {[ 'sunday' , 'monday', 'tuesday'}]) %> 
-</div>
-<div class="field">
-<%= f.label :from_time %><br />
-<%= f.text_field :from_time %>
-</div>
-<div class="field">
-<%= f.label :to_time %><br />
-<%= f.text_field :to_time %>
-</div>
+    <%= f.label :start_date %><br />
+    <%= f.text_field :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.text_field :end_date %>
+  </div>
 
-<div class="actions">
-<%= f.submit %>
-</div>
+<div class="field">
+    <%= f.label :days_of_week %><br />
+    <%= f.text_field :days_of_week %>
+  </div>
+  <div class="field">
+    <%= f.label :from_time %><br />
+    <%= f.text_field :from_time %>
+  </div>
+<div class="field">
+    <%= f.label :to_time %><br />
+    <%= f.text_field :to_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>

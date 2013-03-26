@@ -1,0 +1,24 @@
+<h1> Showing all  states </th>
+
+<table border=1>
+  <tr>
+    <th>Name</th>
+
+    <th></th>
+	<th></th>
+	<th></th>
+  <% @smasters.each do |smaster| %>
+    <tr>
+      <td><%= smaster.name %></th>
+   
+      <td><%= link_to 'Show', smaster %> </th>
+      <td><%= link_to 'Edit', edit_smaster_path(smaster) %></th>
+      <td><%= link_to 'Destroy', smaster, :method => :delete, :data => { :confirm => 'Are you sure?' } %></th>
+
+</tr>
+<% end %>
+</table>
+ 
+<br />
+
+<%= link_to 'New State', new_smaster_path %>

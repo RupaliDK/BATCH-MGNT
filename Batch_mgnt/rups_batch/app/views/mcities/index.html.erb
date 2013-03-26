@@ -1,0 +1,24 @@
+<h1> Showing all  cities </th>
+
+<table border=1>
+  <tr>
+    <th> name</th>
+    <th>state_id</th>
+    <th></th>
+	<th></th>
+	<th></th>
+  <% @mcities.each do |mcitie| %>
+    <tr>
+      <td><%= mcitie.name %></th>
+      <td><%= mcitie.state_id %> </th>
+      <td><%= link_to 'Show', mcitie %> </th>
+      <td><%= link_to 'Edit', edit_mcity_path(mcitie) %></th>
+      <td><%= link_to 'Destroy', mcitie, :method => :delete, :data => { :confirm => 'Are you sure?' } %></th>
+
+</tr>
+<% end %>
+</table>
+ 
+<br />
+
+<%= link_to 'New city', new_mcity_path %>

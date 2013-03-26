@@ -1,32 +1,39 @@
 <p id="notice"><%= notice %></p>
+
 <p>
-<b>title:</b>
-<%= @batches.title %>
+  <b>Title</b>
+  <%= @batches.title %>
 </p>
 <p>
-<b>grade:</b>
-<%= @batches.grade %>
+  <b>grade</b>
+  <%= @batches.grade %>
 </p>
 <p>
-<b>start_date:</b>
-<%= @batches.start_date %>
+  <b>start_date</b>
+  <%= @batches.start_date %>
 </p>
+
 <p>
-<b>end_date:</b>
-<%= @batches.end_date %>
+  <b>end_time</b>
+  <%= @batches.end_date %>
 </p>
+
 <p>
-<b>days_of_week:</b>
-<%= @batches.days_of_week %>
+  <b>days_of_week</b>
+  <%= @batches.days_of_week %>
 </p>
+
 <p>
-<b>from_time:</b>
-<%= @batches.from_time %>
+  <b>from_time</b>
+  <%= @batches.from_time %>
 </p>
+
 <p>
-<b>to_time:</b>
-<%= @batches.to_time %>
+  <b>to_time</b>
+  <%= @batches.to_time %>
 </p>
 
 <%= link_to 'Edit', edit_batch_path(@batches) %> |
 <%= link_to 'Back', batches_path %>
+<%= link_to 'Save', new_batch_path %>
+

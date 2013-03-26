@@ -1,10 +1,11 @@
 RupsBatch::Application.routes.draw do
   get "home/index"
 
-resources :students do
+resources :students
 resources :grades
-end
-resources :grades
+ match '/grades/:grade_id/multidelete' => 'grades#multidelete', :via => :delete, as: :multidelete
+
+
 resources :batches
 resources :smasters
 resources :mcities

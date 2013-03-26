@@ -61,5 +61,3 @@ end#destroy
 
 end#class
 
-
-
