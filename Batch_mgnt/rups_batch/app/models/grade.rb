@@ -1,5 +1,5 @@
 class Grade < ActiveRecord::Base
-  attr_accessible :description, :title
+  
   attr_accessible :title, :description
   has_many :batches, :dependent => :destroy
   has_many :student_grades
