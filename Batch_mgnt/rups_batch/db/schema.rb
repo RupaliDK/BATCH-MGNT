@@ -11,11 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130321093541) do
+ActiveRecord::Schema.define(:version => 20130326100112) do
 
   create_table "batches", :force => true do |t|
     t.string   "title"
-    t.text     "grade"
     t.date     "start_date"
     t.date     "end_date"
     t.text     "days_of_week"
@@ -23,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20130321093541) do
     t.text     "to_time"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.integer  "grade_id"
   end
 
   create_table "grades", :force => true do |t|
@@ -34,9 +34,9 @@ ActiveRecord::Schema.define(:version => 20130321093541) do
 
   create_table "mcities", :force => true do |t|
     t.text     "name"
-    t.text     "state"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "state_id"
   end
 
   create_table "smasters", :force => true do |t|

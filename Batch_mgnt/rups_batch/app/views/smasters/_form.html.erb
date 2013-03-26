@@ -1,0 +1,22 @@
+<%= form_for(@smasters) do |f| %>
+  <% if @smasters.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@smasters.errors.count, "error") %> prohibited
+        this state from being saved:</h2>
+    <ul>
+    <% @smasters.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+ 
+   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

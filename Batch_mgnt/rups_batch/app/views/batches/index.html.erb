@@ -1,0 +1,38 @@
+<h1> Showing all Batches </th>
+
+<table border=1>
+  <tr>
+    <th> Title</th>
+    <th> Grade</th>
+	<th> Start Date</th>
+    <th> End Date</th>
+<th>Days_Of_Week</th>
+    <th>From_time</th>
+<th>To_time</th>
+
+    <th></th>
+	<th></th>
+	<th></th>
+  <% @batches.each do |batch| %>
+    <tr>
+      <td><%= batch.title %></th>
+      <td><%= batch.grade %> </th>
+	<td><%= batch.start_date %></th>
+      <td><%= batch.end_date %> </th>
+	<td><%= batch.days_of_week%> </th>
+	<td><%= batch.from_time %></th>
+      <td><%= batch.to_time%> </th>
+
+      <td><%= link_to 'Show', batch %> </th>
+      <td><%= link_to 'Edit', edit_batch_path(batch) %></th>
+      <td><%= link_to 'Destroy', batch, :method => :delete, :data => { :confirm => 'Are you sure?' } %></th>
+
+</tr>
+<% end %>
+</table>
+ 
+<br />
+
+<%= link_to 'New Batch', new_batch_path %>
+
+
