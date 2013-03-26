@@ -3,14 +3,14 @@
 <table border=1>
   <tr>
     <th> name</th>
-    <th>state_id</th>
+    <th>smaster_id</th>
     <th></th>
 	<th></th>
 	<th></th>
   <% @mcities.each do |mcitie| %>
     <tr>
       <td><%= mcitie.name %></th>
-      <td><%= mcitie.state_id %> </th>
+      <td><%= mcitie.smaster_id %> </th>
       <td><%= link_to 'Show', mcitie %> </th>
       <td><%= link_to 'Edit', edit_mcity_path(mcitie) %></th>
       <td><%= link_to 'Destroy', mcitie, :method => :delete, :data => { :confirm => 'Are you sure?' } %></th>
