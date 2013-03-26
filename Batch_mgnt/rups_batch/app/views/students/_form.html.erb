@@ -1,0 +1,79 @@
+<%= form_for(@students) do |f| %>
+  <% if @students.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@post.errors.count, "error") %> prohibited
+        this student from being saved:</h2>
+    <ul>
+    <% @students.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+ 
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :middle_name %><br />
+    <%= f.text_field :middle_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+<div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+<div class="field">
+    <%= f.label :mobile %><br />
+    <%= f.text_field :mobile %>
+  </div>
+<div class="field">
+    <%= f.label :alternate_mobile %><br />
+    <%= f.text_field :alternate_mobile %>
+  </div>
+<div class="field">
+    <%= f.label :address_line1 %><br />
+    <%= f.text_field :address_line1 %>
+  </div>
+<div class="field">
+    <%= f.label :address_line2 %><br />
+    <%= f.text_field :address_line2 %>
+  </div>
+<div class="field">
+  
+   <%= check_box(checked_value = "1", unchecked_value = "0") %>
+	<%= f.label :sponsor %>
+  </div>
+
+
+<div class="field">
+    <%= f.label :state %><br />
+    <%= collection_select :student, :smaster_id, Smaster.all, :id, :name, { :prompt => true} %>
+
+    </div>
+<div class="field">
+    <%= f.label :city %><br />
+<%= collection_select :student, :mcitie_id, Mcitie.all, :id, :name, { :prompt => true} %>
+  </div>
+<div class="field">
+    <%= f.label :zip_code %><br />
+    <%= f.text_field :zip_code %>
+  </div>
+<div class="field">
+    <%= f.label :grade %><br />
+    <%= f.text_field :grade %>
+
+  </div>
+<div class="field">
+    <%= f.label :enrollment_date %><br />
+    <%= f.text_field :enrollment_date %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

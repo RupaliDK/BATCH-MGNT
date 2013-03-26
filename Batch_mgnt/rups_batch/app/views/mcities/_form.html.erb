@@ -1,0 +1,27 @@
+<%= form_for(@mcities) do |f| %>
+<% if @mcities.errors.any? %>
+<div id="errorExplanation">
+<h2><%= pluralize(@mcities.errors.count, "error") %> prohibited
+this mcities from being saved:</h2>
+<ul>
+<% @mcities.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+
+<div class="field">
+<%= f.label :name %><br />
+<%= f.text_field :name %>
+</div>
+<div class="field">
+<%= f.label :state %><br />
+<%= f.text_field :state %>
+</div>
+
+<div class="actions">
+<%= f.submit %>
+</div>
+<% end %>
+

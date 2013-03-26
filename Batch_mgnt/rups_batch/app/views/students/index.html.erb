@@ -1,11 +1,45 @@
 <h1>welcome student registration</h1>
-     <% @students.each do |student| %>
+<table border="1">
+  <tr>
+	<th>first_name</th>
+	<th>last_name</th>
+	<th>middle_name</th>
+	<th>email</th>
+	<th>mobile</th>
+	<th>alternate_mobile</th>
+	<th>state</th>
+	<th>city</th>
+	<th>address_line1</th>
+	<th>address_line2</th>
+	<th>grade</th>
+	<th>zip_code</th>
+	<th>enrollment_date</th>
+	<th>sponsor</th>
+
+  </tr>
+   <%- @students.each do |student| %>
        <tr>
         <td><%= student.first_name %></td>
-       
+        <td><%= student.last_name %></td>
+	   <td><%= student.middle_name %></td>
+	   <td><%= student.email %></td>
+	   <td><%= student.mobile %></td>
+	   <td><%= student.alternate_mobile %></td>
+	   <td><%= student.smaster_id %></td>
+	   <td><%= student.mcitie_id %></td>
+        <td><%= student.address_line1 %></td>
+        <td><%= student.address_line2 %></td>
+        <td><%= student.zip_code %></td>
+	   <td><%= student.grade %></td>
+	   <td><%= student.qualifies_with %></td>
+        <td><%= student.enrollment_date %></td>
+	   <td><%= student.sponsor %></td>
+
+      
+
         <td><%= link_to 'Show', student %></td>
-        <td><%= link_to 'Edit', edit_student_path(student) %></td>
+        <td><%= link_to 'Edit', edit_student_path(student) %>			</td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm:'sure?'} %></td>
-       </tr>
-         <% end %>
-<%= link_to 'New student', new_student_path %>
+      </tr>
+   <% end %>
+</table>

@@ -1,5 +1,9 @@
 RupsBatch::Application.routes.draw do
-resources :students
+  get "home/index"
+
+resources :students do
+resources :grades
+end
 resources :grades
 resources :batches
 resources :smasters
