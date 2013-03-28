@@ -9,6 +9,7 @@ resources :grades
 resources :batches
 resources :smasters
 resources :mcities
+resources :home
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

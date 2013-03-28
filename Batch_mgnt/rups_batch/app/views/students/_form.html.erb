@@ -43,11 +43,6 @@
     <%= f.label :address_line2 %><br />
     <%= f.text_field :address_line2 %>
   </div>
-<div class="field">
-  
-   <%= check_box(checked_value = "1", unchecked_value = "0") %>
-	<%= f.label :sponsor %>
-  </div>
 
 
 <div class="field">
@@ -64,14 +59,25 @@
     <%= f.text_field :zip_code %>
   </div>
 <div class="field">
-    <%= f.label :grade %><br />
-    <%= f.text_field :grade %>
+ <%= f.label :grade %><br />
+<%= collection_select :student, :grade_id, Grade.all, :id, :title, { :prompt => 'select grade'} %>
 
   </div>
 <div class="field">
     <%= f.label :enrollment_date %><br />
     <%= f.text_field :enrollment_date %>
   </div>
+<div class="field">
+  
+   <%= check_box(checked_value = "1", unchecked_value = "0") %>
+	<%= f.label :sponsor %>
+  </div>
+<div class="field">
+ <%= f.label :qualifies_with %><br />
+ <%= radio_button("qualifies_with","grade","")%> previous grade   clearance <br\>
+ <%= radio_button("qualifies_with","grade","")%> entrance test  clearance <br\> 
+  </div>
+
 
   <div class="actions">
     <%= f.submit %>

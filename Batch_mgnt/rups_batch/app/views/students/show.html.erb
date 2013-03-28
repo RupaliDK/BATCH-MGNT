@@ -2,7 +2,7 @@
  
 <p>
   <b>firstName:</b>
-  <%= @students.first_name + " " + @students.last_name %>
+  <%= @students.first_name+" "+@students.last_name %>
 </p>
  
 <p>
@@ -24,6 +24,10 @@
   <b>mobile:</b>
   <%= @students.mobile %>
 </p>
+<p>
+  <b>alternate_mobile:</b>
+  <%= @students.alternate_mobile %>
+</p>
 
 <p>
   <b>State:</b>
@@ -34,6 +38,15 @@
   <b>city:</b>
   <%= @students.mcitie_id %>
 </p>
+<p>
+  <b>address_line1:</b>
+  <%= @students.address_line1 %>
+</p>
+<p>
+  <b>address_line2:</b>
+  <%= @students.address_line2 %>
+</p>
+
 
 <p>
   <b>Zip_code:</b>
@@ -42,12 +55,23 @@
 
 <p>
   <b>Grade:</b>
-  <%= @students.grade %>
+  <%= @students.grade_id %>
 </p>
+<p>
+  <b>qualifies_with:</b>
+  <%= @students.qualifies_with %>
+</p>
+
 <p>
   <b>Enrollment_Date:</b>
   <%= @students.enrollment_date %>
 </p>
+<p>
+  <b>sponsor:</b>
+  <%= @students.sponsor %>
+</p>
+
+
 <%= link_to 'Edit', edit_student_path(@students) %> 
 <%= link_to 'Back', students_path %>
 <%= link_to 'Save', new_grade_path %>
