@@ -28,14 +28,11 @@
     <%= f.text_field :end_date %>
   </div>
 
+
 <div class="field">
-    <%= f.label :days_of_week %><br />
-<%= radio_button_tag 'days_of_week','monday'%> Monday	
-<%= radio_button_tag 'days_of_week', 'wednesday' %> Wednesday
-<%= radio_button_tag 'days_of_week', 'friday' %> Friday
-<%= radio_button_tag 'days_of_week', 'thursday'%> Thursday
-<%= radio_button_tag 'days_of_week', 'tuesday' %> Tuesday
-<%= radio_button_tag 'days_of_week', 'saturday' %> Saturday
+   <%= f.label :days_of_week %><br />
+  <%= radio_button_tag 'days_of_week','monday, wednesday, friday'%> Monday, Wednesday, Friday	
+  <%= radio_button_tag 'days_of_week', 'tuesday, thursday, saturday'%> Tuesday, Thursday, Saturday
 
 <br />
   </div>

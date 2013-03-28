@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20130328082643) do
     t.text     "alternate_mobile"
     t.text     "address"
     t.text     "zip_code"
+    t.text     "grade"
     t.date     "enrollment_date"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
