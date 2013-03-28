@@ -1,4 +1,4 @@
-<%= form_for(@students) do |f| %>
+﻿<%= form_for(@students) do |f| %>
   <% if @students.errors.any? %>
   <div id="errorExplanation">
     <h2><%= pluralize(@post.errors.count, "error") %> prohibited
@@ -58,11 +58,11 @@
     <%= f.label :zip_code %><br />
     <%= f.text_field :zip_code %>
   </div>
-<div class="field">
- <%= f.label :grade %><br />
-<%= collection_select :student, :grade_id, Grade.all, :id, :title, { :prompt => 'select grade'} %>
+<%= field_for @students.grades, :grades do |g| %>
+  <%= g.text_field :grade %>
+  <% end %>
+  <%= collection_select :student, :student_id, Grade.all, :id, :title, { :prompt => 'select grade'} %>
 
-  </div>
 <div class="field">
     <%= f.label :enrollment_date %><br />
     <%= f.text_field :enrollment_date %>

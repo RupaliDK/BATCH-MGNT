@@ -18,6 +18,7 @@ end#create
 
 def new
 	 @students = Student.new
+	 @students.grades.build
 end#new
 
 def show
