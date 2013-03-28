@@ -27,12 +27,11 @@
     <%= f.label :end_date %><br />
     <%= f.text_field :end_date %>
   </div>
-
-
 <div class="field">
    <%= f.label :days_of_week %><br />
-  <%= radio_button_tag 'days_of_week','monday, wednesday, friday'%> Monday, Wednesday, Friday	
-  <%= radio_button_tag 'days_of_week', 'tuesday, thursday, saturday'%> Tuesday, Thursday, Saturday
+  <%= f.radio_button(:days_of_week, 'monday,wednesday,friday') %> Monday, Wednesday, Friday	
+  <%= f.radio_button(:days_of_week, 'Tuesday, Thursday, Saturday
+') %> Tuesday, Thursday, Saturday
 
 <br />
   </div>
