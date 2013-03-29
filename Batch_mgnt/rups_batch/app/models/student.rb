@@ -3,10 +3,10 @@ class Student < ActiveRecord::Base
   belongs_to :mcities
   belongs_to :smasters
   has_and_belongs_to_many :grades
-
-  #has_many :grades :through => grades
+  accepts_nested_attributes_for :grades
+ 
   has_many :batches
-  #has_many :batches :through => students_batches
+  
 
   attr_accessible :address, :alternate_mobile, :email, :enrollment_date, :first_name, :grade, :last_name, :middle_name, :mobile, :state, :city, :zip_code, :address_line1, :address_line2, :qualifies_with, :sponsor, :smaster_id, :mcitie_id, :qualifies_with, :grade_id
 

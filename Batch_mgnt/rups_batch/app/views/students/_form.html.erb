@@ -58,10 +58,12 @@
     <%= f.label :zip_code %><br />
     <%= f.text_field :zip_code %>
   </div>
-<%= field_for @students.grades, :grades do |g| %>
-  <%= g.text_field :grade %>
-  <% end %>
+
+<%= f.fields_for :grades_students do |g| %>
+<%= f.label :grade %>
   <%= collection_select :student, :student_id, Grade.all, :id, :title, { :prompt => 'select grade'} %>
+<% end %>
+
 
 <div class="field">
     <%= f.label :enrollment_date %><br />

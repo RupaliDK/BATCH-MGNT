@@ -13,7 +13,8 @@ class CreateStudents < ActiveRecord::Migration
       t.text :zip_code
       t.text :grade
       t.date :enrollment_date
-
+	t.references :grades
+	
       t.timestamps
     end
   end
