@@ -1,5 +1,14 @@
 class BatchesController < ApplicationController
 
+def index
+    @batches = Batch.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @batches }
+    end
+  end
+
   def show
     @batches = Batch.find(params[:id])
 
