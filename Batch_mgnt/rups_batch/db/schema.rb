@@ -11,18 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130328044227) do
+=======
+ActiveRecord::Schema.define(:version => 20130329075147) do
+>>>>>>> b7797ff2f224fa86d89ea5d9fa7198365370796b
 
   create_table "batches", :force => true do |t|
     t.string   "title"
     t.date     "start_date"
     t.date     "end_date"
     t.text     "days_of_week"
-    t.text     "from_time"
-    t.text     "to_time"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.integer  "grade_id"
+    t.time     "from_time"
+    t.time     "to_time"
   end
 
   create_table "grades", :force => true do |t|
