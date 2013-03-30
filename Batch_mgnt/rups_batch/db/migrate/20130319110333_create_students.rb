@@ -1,6 +1,6 @@
 class CreateStudents < ActiveRecord::Migration
   def change
-    create_table :students, :id => false do |t|
+    create_table :students do |t|
       t.string :first_name
       t.string :last_name
       t.string :string
@@ -13,7 +13,6 @@ class CreateStudents < ActiveRecord::Migration
       t.text :zip_code
       t.text :grade
       t.date :enrollment_date
-      t.references :grades
     end
   end
 end
