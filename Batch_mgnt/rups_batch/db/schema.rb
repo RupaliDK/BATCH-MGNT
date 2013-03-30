@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130328082643) do
+ActiveRecord::Schema.define(:version => 20130328044227) do
 
   create_table "batches", :force => true do |t|
     t.string   "title"
@@ -25,22 +25,11 @@ ActiveRecord::Schema.define(:version => 20130328082643) do
     t.integer  "grade_id"
   end
 
-  create_table "grades", :force => true do |t|
-    t.text     "title"
-    t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+  create_table "grades", :id => false, :force => true do |t|
+    t.text    "title"
+    t.text    "description"
+    t.integer "students_id"
   end
-
-  create_table "grades_students", :force => true do |t|
-    t.integer  "grade_id"
-    t.integer  "student_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "grades_students", ["grade_id"], :name => "index_grades_students_on_grade_id"
-  add_index "grades_students", ["student_id"], :name => "index_grades_students_on_student_id"
 
   create_table "mcities", :force => true do |t|
     t.text     "name"
@@ -55,25 +44,24 @@ ActiveRecord::Schema.define(:version => 20130328082643) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "students", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "middle_name"
-    t.text     "email"
-    t.text     "mobile"
-    t.text     "alternate_mobile"
-    t.text     "address"
-    t.text     "zip_code"
-    t.text     "grade"
-    t.date     "enrollment_date"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-    t.text     "address_line1"
-    t.text     "address_line2"
-    t.text     "qualifies_with"
-    t.boolean  "sponsor"
-    t.integer  "smaster_id"
-    t.integer  "mcitie_id"
+  create_table "students", :id => false, :force => true do |t|
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "middle_name"
+    t.text    "email"
+    t.text    "mobile"
+    t.text    "alternate_mobile"
+    t.text    "address"
+    t.text    "zip_code"
+    t.text    "grade"
+    t.date    "enrollment_date"
+    t.integer "grades_id"
+    t.text    "address_line1"
+    t.text    "address_line2"
+    t.text    "qualifies_with"
+    t.boolean "sponsor"
+    t.integer "smaster_id"
+    t.integer "mcitie_id"
   end
 
 end
