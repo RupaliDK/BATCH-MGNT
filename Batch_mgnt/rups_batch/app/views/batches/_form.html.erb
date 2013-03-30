@@ -21,11 +21,11 @@
   </div>
 <div class="field">
     <%= f.label :start_date %><br />
-    <%= f.text_field :start_date %>
-  </div>
+     <%= f.date_select :start_date, :as => :datepicker %>
+    </div>
   <div class="field">
     <%= f.label :end_date %><br />
-    <%= f.text_field :end_date %>
+    <%= f.date_select :end_date, :input_html => { :class => 'datePicker'} %>
   </div>
 <div class="field">
    <%= f.label :days_of_week %><br />
@@ -37,12 +37,12 @@
   </div>
   <div class="field">
     <%= f.label :from_time %><br />
-    <%= f.time_select :from_time, :ampm => true %>
-    
+<%= f.time_select(:from_time, :ignore_date => true)%>    
   </div>
 <div class="field">
     <%= f.label :to_time %><br />
-	<%= f.time_select :to_time, :ampm => true %>  
+	<%= f.time_select(:to_time, :ignore_date => true)%>    
+
 </div>
   <div class="actions">
     <%= f.submit %>

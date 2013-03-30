@@ -11,18 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130328044227) do
+  ActiveRecord::Schema.define(:version => 20130329075147) do
 
   create_table "batches", :force => true do |t|
     t.string   "title"
     t.date     "start_date"
     t.date     "end_date"
     t.text     "days_of_week"
-    t.text     "from_time"
-    t.text     "to_time"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.integer  "grade_id"
+    t.time     "from_time"
+    t.time     "to_time"
   end
 
   create_table "grades", :id => false, :force => true do |t|
@@ -63,5 +63,4 @@ ActiveRecord::Schema.define(:version => 20130328044227) do
     t.integer "smaster_id"
     t.integer "mcitie_id"
   end
-
 end

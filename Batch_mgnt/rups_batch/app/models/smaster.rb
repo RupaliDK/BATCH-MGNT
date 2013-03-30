@@ -1,7 +1,7 @@
 class Smaster < ActiveRecord::Base
 attr_accessible :name
 
- has_many :cities
+  has_many :cities
   has_one :students
 
   validates :name, :presence => true
