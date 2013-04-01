@@ -47,23 +47,21 @@
 
 <div class="field">
     <%= f.label :state %><br />
-    <%= collection_select :student, :smaster_id, Smaster.all, :id, :name, { :prompt => true} %>
+    <%= collection_select :student, :id, Smaster.all, :id, :name, { :prompt => true} %>
 
     </div>
 <div class="field">
     <%= f.label :city %><br />
-<%= collection_select :student, :mcitie_id, Mcitie.all, :id, :name, { :prompt => true} %>
+<%= collection_select :student, :id, Mcitie.all, :id, :name, { :prompt => true} %>
   </div>
 <div class="field">
     <%= f.label :zip_code %><br />
     <%= f.text_field :zip_code %>
   </div>
 
-<%= f.fields_for :grades_students do |g| %>
-<%= f.label :grade %>
-  <%= collection_select :student, :student_id, Grade.all, :id, :title, { :prompt => 'select grade'} %>
-<% end %>
-
+<div class="field">
+ <%= f.label :grade %><br />
+<%= collection_select :student, :id, Grade.all, :id, :title, { :prompt => 'select grade'} %>
 
 <div class="field">
     <%= f.label :enrollment_date %><br />
