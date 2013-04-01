@@ -25,7 +25,7 @@
     </div>
   <div class="field">
     <%= f.label :end_date %><br />
-    <%= f.text_field :end_date, :as => :datePicker, :readonly => true %>
+    <%= f.text_field :end_date, :as => :datePicker', :readonly => true %>
   </div>
 <div class="field">
    <%= f.label :days_of_week %><br />

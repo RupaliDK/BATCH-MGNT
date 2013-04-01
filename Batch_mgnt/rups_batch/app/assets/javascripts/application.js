@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require_tree .
 
+$(document).ready(function() {
+  $('.alert').alert();
+  //$('.alert').delay(2000).fadeOut("slow", function () { $(this).remove(); })
+})
+
