@@ -1,7 +1,7 @@
-﻿<%= form_for(@students) do |f| %>
+<%= form_for(@students) do |f| %>
   <% if @students.errors.any? %>
   <div id="errorExplanation">
-    <h2><%= pluralize(@post.errors.count, "error") %> prohibited
+    <h2><%= pluralize(@students.errors.count, "error") %> prohibited
         this student from being saved:</h2>
     <ul>
     <% @students.errors.full_messages.each do |msg| %>
@@ -47,12 +47,12 @@
 
 <div class="field">
     <%= f.label :state %><br />
-    <%= collection_select :student, :id, Smaster.all, :id, :name, { :prompt => true} %>
+    <%= f.collection_select :smaster_id, Smaster.all, :id, :name, { :prompt => true} %>
 
     </div>
 <div class="field">
     <%= f.label :city %><br />
-<%= collection_select :student, :id, Mcitie.all, :id, :name, { :prompt => true} %>
+<%= f.collection_select :mcitie_id, Mcitie.all, :id, :name, { :prompt => true} %>
   </div>
 <div class="field">
     <%= f.label :zip_code %><br />
@@ -74,8 +74,8 @@
   </div>
 <div class="field">
  <%= f.label :qualifies_with %><br />
- <%= radio_button("qualifies_with","grade","")%> previous grade   clearance <br\>
- <%= radio_button("qualifies_with","grade","")%> entrance test  clearance <br\> 
+ <%= radio_button("qualifies_with","grade","")%> previous grade   clearance <br />
+ <%= radio_button("qualifies_with","grade","")%> entrance test  clearance <br /> 
   </div>
 
 

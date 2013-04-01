@@ -30,17 +30,19 @@
 	   <td><%= student.mcitie_id %></td>
         <td><%= student.address_line1 %></td>
         <td><%= student.address_line2 %></td>
+	   <td><%= student.grade %></td>
         <td><%= student.zip_code %></td>
-	   <td><%= student.grades %></td>
 	   <td><%= student.qualifies_with %></td>
         <td><%= student.enrollment_date %></td>
 	   <td><%= student.sponsor %></td>
 
       
 
-        <td><%= link_to 'Show', student %></td>
+        <td><%= link_to 'Show', student_path(student) %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %>			</td>
-        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm:'sure?'} %></td>
-      </tr>
+        <td><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>        
+</tr>
    <% end %>
 </table>
+
+<%= link_to 'New Student', new_student_path %>

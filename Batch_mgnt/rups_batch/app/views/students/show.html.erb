@@ -1,79 +1,58 @@
-<p id="notice"><%= notice %></p>
- 
-<p>
-  <b>firstName:</b>
-  <%= @students.first_name+" "+@students.last_name %>
+<h1> Student details</h1>
+
+<h2> Personal information</h2>
+<table border=1>
+  <tr>
+    <th> first name </th>
+    <th> last name </th>
+    <th> middle name </th>
+    <th> mobile </th>
+    <th> alternate mobile </th>
+    <th> Email </th>
+  </tr>
+
+  <tr>
+    <td><%= @students.first_name + " " + @students.last_name %>  </td>
+    <td><%= @students.middle_name %></td>
+    <td><%= @students.mobile %></td>
+    <td><%= @students.alternate_mobile %></td>
+    <td><%= @students.email %></td>
+  </tr>
+</table>
+
+<h2> Address information </h2>
+<table border=1>
+  <tr>
+    <th>Address line1</th>
+    <th>Address line2</th>
+    <th>city </th>
+	<th>state</th>	
+    <th>zip code</th>
+  </tr>
   
-</p>
+  <tr>
+    <td><%= @students.address_line1 %></td>
+    <td><%= @students.address_line2 %></td>
+    <td><%= @students.mcitie %></td>
+    <td><%= @students.smaster %>	
+    <td><%= @students.zip_code %></td>
+  </tr> 
+ </table>
  
-<p>
-  <b>lastname:</b>
-  <%= @students.last_name %>
-</p>
- 
-<p>
-  <b>middlename:</b>
-  <%= @students.middle_name %>
-</p>
- 
-<p>
-  <b>Email:</b>
-  <%= @students.email %>
-</p>
-
-<p>
-  <b>mobile:</b>
-  <%= @students.mobile %>
-</p>
-<p>
-  <b>alternate_mobile:</b>
-  <%= @students.alternate_mobile %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%= @students.smaster_id %>
-</p>
-
-<p>
-  <b>city:</b>
-  <%= @students.mcitie_id %>
-</p>
-<p>
-  <b>address_line1:</b>
-  <%= @students.address_line1 %>
-</p>
-<p>
-  <b>address_line2:</b>
-  <%= @students.address_line2 %>
-</p>
+<h2> Other information </h2>
+<table border=1>
+  <tr>
+    <th> Enrollment date </th>
+    <th> Qualifies with </th>
+    <th> Sponsor </th>
+  </tr>
+  <tr>
+    <td><%= @students.enrollment_date %></td>
+    <td><%= @students.qualifies_with %></td>
+    <td><%= @students.sponsor %></td> 
+  </tr>
+<table>
 
 
-<p>
-  <b>Zip_code:</b>
-  <%= @students.zip_code %>
-</p>
-
-<p>
-  <b>Grade:</b>
-  <%= @students.grade_id %>
-</p>
-<p>
-  <b>qualifies_with:</b>
-  <%= @students.qualifies_with %>
-</p>
-
-<p>
-  <b>Enrollment_Date:</b>
-  <%= @students.enrollment_date %>
-</p>
-<p>
-  <b>sponsor:</b>
-  <%= @students.sponsor %>
-</p>
-
-
-<%= link_to 'Edit', edit_student_path(@students) %> 
+<%= link_to 'Edit', edit_student_path(@students) %> |
 <%= link_to 'Back', students_path %>
-<%= link_to 'Save', new_grade_path %>
-
