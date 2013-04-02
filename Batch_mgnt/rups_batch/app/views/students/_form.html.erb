@@ -62,19 +62,21 @@
 <div class="field">
  <%= f.label :grade %><br />
 <%= collection_select :student, :id, Grade.all, :id, :title, { :prompt => 'select grade'} %>
+</div>
 
 <div class="field">
     <%= f.label :enrollment_date %><br />
     <%= f.text_field :enrollment_date, :class => "datepicker" , :readonly => true  %>
   </div>
+
 <div class="field">
-  
-   <%= check_box(checked_value = "1", unchecked_value = "0") %>
-	<%= f.label :sponsor %>
-  </div>
+<%= f.label :sponsor %>
+<%= check_box(checked_value = "1", unchecked_value = "0") %>
+</div>
+
 <div class="field">
  <%= f.label :qualifies_with %><br />
- <%= radio_button("qualifies_with","grade","")%> previous grade   clearance <br />
+ <%= radio_button("qualifies_with","grade","")%> previous grade   clearance
  <%= radio_button("qualifies_with","grade","")%> entrance test  clearance <br /> 
   </div>
 

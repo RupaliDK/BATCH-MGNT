@@ -31,7 +31,12 @@ end#show
 
 def edit
   @students = Student.find(params[:id])
-end
+  respond_to do |format|
+       format.html # show.html.erb
+       format.json { render json: @students }
+       end#do
+
+end#edit
 
 def update
   @students = Student.find(params[:id])
@@ -52,10 +57,9 @@ end
 def destroy
   @students = Student.find(params[:id])
   @students.destroy
- 
-    respond_to do |format|
+     respond_to do |format|
     format.html { redirect_to students_url }
     format.json { head :no_content }
   end#do
 end#destroy
-end
+end#class
