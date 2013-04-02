@@ -5,7 +5,7 @@ class Student < ActiveRecord::Base
   has_and_belongs_to_many :grades
   has_many :batches
   
-attr_accessible :address, :alternate_mobile, :email, :enrollment_date, :first_name, :last_name, :middle_name, :mobile, :state, :city, :zip_code, :address_line1, :address_line2, :qualifies_with, :sponsor, :qualifies_with, :smaster_id, :mcitie_id 
+attr_accessible :address, :alternate_mobile, :email, :enrollment_date, :first_name, :last_name, :middle_name, :mobile, :zip_code, :address_line1, :address_line2, :qualifies_with, :sponsor, :qualifies_with, :smaster_id, :mcitie_id 
 
   accepts_nested_attributes_for :grades
 

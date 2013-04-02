@@ -50,8 +50,10 @@ def update
 end
 
 def destroy
-  @students = Student.find(params[:id])
-  @students.destroy
+   @student = Student.find(params[:id])
+   p "----------------------"
+   p @student
+   @student.destroy
  
     respond_to do |format|
     format.html { redirect_to students_url }
