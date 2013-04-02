@@ -1,8 +1,8 @@
 class Smaster < ActiveRecord::Base
 attr_accessible :name
 
-  has_many :cities
-  has_one :students
+  has_many :mcities
+  has_many :students
 
   validates :name, :presence => true
   validates :name, uniqueness: true

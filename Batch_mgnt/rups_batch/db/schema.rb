@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20130330073456) do
   create_table "grades", :force => true do |t|
     t.text     "title"
     t.text     "description"
+    t.integer  "students_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -66,6 +67,7 @@ ActiveRecord::Schema.define(:version => 20130330073456) do
     t.text     "zip_code"
     t.text     "grade"
     t.date     "enrollment_date"
+    t.integer  "grades_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.text     "address_line1"

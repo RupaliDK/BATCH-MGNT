@@ -53,7 +53,7 @@ def destroy
   @students = Student.find(params[:id])
   @students.destroy
  
-  respond_to do |format|
+    respond_to do |format|
     format.html { redirect_to students_url }
     format.json { head :no_content }
   end#do

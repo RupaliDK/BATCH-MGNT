@@ -1,15 +1,43 @@
-<p id="notice"><%= notice %></p>
- 
-<p>
-  <b>firstName:</b>
-  <%= @students.first_name+" "+@students.last_name %>
+<h1> Student details</h1>
+
+<h2> Personal information</h2>
+<table border=1>
+  <tr>
+    <th> first name </th>
+    <th> last name </th>
+    <th> middle name </th>
+    <th> mobile </th>
+    <th> alternate mobile </th>
+    <th> Email </th>
+  </tr>
+
+  <tr>
+    <td><%= @students.first_name + " " + @students.last_name %>  </td>
+    <td><%= @students.middle_name %></td>
+    <td><%= @students.mobile %></td>
+    <td><%= @students.alternate_mobile %></td>
+    <td><%= @students.email %></td>
+  </tr>
+</table>
+
+<h2> Address information </h2>
+<table border=1>
+  <tr>
+    <th>Address line1</th>
+    <th>Address line2</th>
+    <th>city </th>
+	<th>state</th>	
+    <th>zip code</th>
+  </tr>
   
-</p>
- 
-<p>
-  <b>lastname:</b>
-  <%= @students.last_name %>
-</p>
+  <tr>
+    <td><%= @students.address_line1 %></td>
+    <td><%= @students.address_line2 %></td>
+    <td><%= @students.mcitie %></td>
+    <td><%= @students.smaster %>	
+    <td><%= @students.zip_code %></td>
+  </tr> 
+ </table>
  
 <p>
   <b>middlename:</b>
@@ -74,6 +102,20 @@
 
 
 <%= link_to 'Edit', edit_student_path(@students) %> 
-<%= link_to 'Back', students_path %>
-<%= link_to 'Save', new_grade_path %>
+<h2> Other information </h2>
+<table border=1>
+  <tr>
+    <th> Enrollment date </th>
+    <th> Qualifies with </th>
+    <th> Sponsor </th>
+  </tr>
+  <tr>
+    <td><%= @students.enrollment_date %></td>
+    <td><%= @students.qualifies_with %></td>
+    <td><%= @students.sponsor %></td> 
+  </tr>
+<table>
 
+
+<%= link_to 'Edit', edit_student_path(@students) %> |
+<%= link_to 'Back', students_path %>
