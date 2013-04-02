@@ -11,4 +11,7 @@
  *= require_self
  *= require_tree .
  *= require jquery.ui.datepicker
- */
+ *= require bootstrap-datepicker
+ *= require twitter/bootstrap
+ *= require jquery.timepicker.css
+*/

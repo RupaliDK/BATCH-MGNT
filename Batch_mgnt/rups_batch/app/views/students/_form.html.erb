@@ -1,4 +1,4 @@
-﻿<%= form_for(@students) do |f| %>
+<%= form_for(@students) do |f| %>
   <% if @students.errors.any? %>
   <div id="errorExplanation">
     <h2><%= pluralize(@post.errors.count, "error") %> prohibited
@@ -65,7 +65,7 @@
 
 <div class="field">
     <%= f.label :enrollment_date %><br />
-    <%= f.text_field :enrollment_date %>
+    <%= f.text_field :enrollment_date, :class => "datepicker" , :readonly => true  %>
   </div>
 <div class="field">
   
