@@ -1,5 +1,5 @@
+<p id="notice"><%= notice %></p>
 <h1> Student details</h1>
-
 <h2> Personal information</h2>
 <table border=1>
   <tr>
@@ -12,11 +12,11 @@
   </tr>
 
   <tr>
-    <td><%= @students.first_name + " " + @students.last_name %>  </td>
-    <td><%= @students.middle_name %></td>
-    <td><%= @students.mobile %></td>
-    <td><%= @students.alternate_mobile %></td>
-    <td><%= @students.email %></td>
+    <td><%= @student.first_name + " " + @student.last_name %>  </td>
+    <td><%= @student.middle_name %></td>
+    <td><%= @student.mobile %></td>
+    <td><%= @student.alternate_mobile %></td>
+    <td><%= @student.email %></td>
   </tr>
 </table>
 
@@ -25,21 +25,19 @@
   <tr>
     <th>Address line1</th>
     <th>Address line2</th>
-    <th>city </th>
-	<th>state</th>	
+    <th>Location </th>
     <th>zip code</th>
   </tr>
   
   <tr>
-    <td><%= @students.address_line1 %></td>
-    <td><%= @students.address_line2 %></td>
-    <td><%= @students.mcitie %></td>
-    <td><%= @students.smaster %>	
-    <td><%= @students.zip_code %></td>
+    <td><%= @student.address_line1 %></td>
+    <td><%= @student.address_line2 %></td>
+    <td><%= @student.mcitie.name + " " + @student.smaster.name %></td>
+    <td><%= @student.zip_code %></td>
   </tr> 
  </table>
- 
-<h2> Other information </h2>
+
+ <h2> Other information </h2>
 <table border=1>
   <tr>
     <th> Enrollment date </th>
@@ -47,12 +45,12 @@
     <th> Sponsor </th>
   </tr>
   <tr>
-    <td><%= @students.enrollment_date %></td>
-    <td><%= @students.qualifies_with %></td>
-    <td><%= @students.sponsor %></td> 
+    <td><%= @student.enrollment_date %></td>
+    <td><%= @student.qualifies_with %></td>
+    <td><%= @student.sponsor %></td> 
   </tr>
 <table>
 
 
-<%= link_to 'Edit', edit_student_path(@students) %> |
+<%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>

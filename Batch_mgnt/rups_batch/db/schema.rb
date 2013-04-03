@@ -33,6 +33,16 @@ ActiveRecord::Schema.define(:version => 20130330073456) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "grades_students", :force => true do |t|
+    t.integer  "grade_id"
+    t.integer  "student_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "grades_students", ["grade_id"], :name => "index_grades_students_on_grade_id"
+  add_index "grades_students", ["student_id"], :name => "index_grades_students_on_student_id"
+
   create_table "mcities", :force => true do |t|
     t.text     "name"
     t.datetime "created_at", :null => false
